@@ -2,8 +2,8 @@
 Progress tracker for my machine learning studies.
 
 ## What's here
-- Housing dataset scatter and bar plots using matplotlib (For example plots)
 - Data preprocessing with pandas
+- API Imported Datasets scatter and bar plots using matplotlib
 
 ## Stack
 - Python
