@@ -1,24 +1,28 @@
 #Demo for showing plots progress
-import numpy as np
+import kagglehub
 import pandas as pd
 import matplotlib.pyplot as plt
 
-d=pd.read_csv(r"Plots+Data\attachment_25167_House_Rent_Dataset.csv.csv")
+d=pd.read_csv(r"Machine_Learning\Plots+Data\attachment_25167_House_Rent_Dataset.csv.csv")
 dc=d[(d["Rent"] < 30000) & (d["Size"] < 7000)]
 sorted_dates=d.sort_values("Posted On")
 
-def Filter_NaN(x):
+def Filter(x):
     return x.dropna()
-
-def Scatter_Housing():
-    data= Filter_NaN(dc)
+def scatter(d,x,y, outliers=True, percentile=95):
+    data=Filter(d)
+    if outliers:
+        data = data[(data[x] < np.percentile(data[x], percentile)) & 
+                    (data[y] < np.percentile(data[y], percentile))]
     plt.figure(figsize=(15,10))
-    plt.scatter(data["Size"], data["Rent"], alpha=0.2)
-    plt.title("Size to Rent")
-    plt.xlabel("Size")
-    plt.ylabel("Rent")
+    plt.scatter(data[x], data[y], alpha=0.2)
+    plt.title(f"{x} to {y}")
+    plt.xlabel(x)
+    plt.ylabel(y)
     plt.xticks(rotation=45)
     plt.show()
+
+#scatter(dc, "Size", "Rent", True)
 
 def Bar_Housing():
     data=Filter_NaN(d)
@@ -40,4 +44,8 @@ def Line_Housing():
     plt.xticks(rotation=45)
     plt.show()
 
-Line_Housing()
+
+path= kagglehub.dataset_download("dmahajanbe23/bmw-global-automotive-sales")
+data=pd.read_csv(path + "/bmw_global_sales_2018_2025.csv")
+
+scatter(data, "GDP_Growth", "Premium_Share", True)
