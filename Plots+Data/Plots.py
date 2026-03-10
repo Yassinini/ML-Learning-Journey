@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-d=pd.read_csv(r"D:\@Code\yayay\Machine_Learning\Plots+Data\attachment_25167_House_Rent_Dataset.csv.csv")
+d=pd.read_csv(r"Plots+Data\attachment_25167_House_Rent_Dataset.csv.csv")
 dc=d[(d["Rent"] < 30000) & (d["Size"] < 7000)]
 #print(d.isna().sum()) none
 
