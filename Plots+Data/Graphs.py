@@ -5,7 +5,7 @@ import pandas as pd
 
 path = kagglehub.dataset_download("anassarfraz13/housing-dataset-info-about-houses")
 d = pd.read_csv(path + "/Housing.csv")
-scatter(d, "area", "price")
+#scatter(d, "area", "price")
 #line(d, "area", "price")
 
 

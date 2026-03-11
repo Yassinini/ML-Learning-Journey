@@ -15,7 +15,7 @@ Keeping progress updates for libraries as i learn (Post Pandas & Numpy).
     - Scatter plots
     - Bar plots
     - Line plots
-*more to come*
+
 
 ## Stack
 - Python
