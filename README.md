@@ -1,5 +1,6 @@
 # ML Learning Journey
 Progress tracker for my machine learning studies.
+Keeping progress updates for libraries as i learn (Post Pandas & Numpy).
 
 ## What's here
 - Data preprocessing with pandas
