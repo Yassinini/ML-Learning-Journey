@@ -22,3 +22,9 @@ Keeping progress updates for libraries as i learn (Post Pandas & Numpy).
 - pandas
 - matplotlib
 - numpy
+
+## Requirements
+- Matplotlib
+- Pandas
+- Numpy
+- Kaggelhub
