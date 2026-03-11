@@ -1,8 +1,7 @@
 from Plots import scatter, bar, line, Filter, sort
 import kagglehub
 import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
+
 
 path = kagglehub.dataset_download("anassarfraz13/housing-dataset-info-about-houses")
 d = pd.read_csv(path + "/Housing.csv")
@@ -16,7 +15,7 @@ d=pd.read_csv(path + "/bmw_global_sales_2018_2025.csv")
 
 path = kagglehub.dataset_download("zkskhurram/breast-cancer-stat-and-aware-dataset-2022-2025")
 d=pd.read_csv(path + "/breast_cancer_risk_factors.csv")
-line(d, "Risk_Factor", "Relative_Risk")
+#line(d, "Risk_Factor", "Relative_Risk")
 
 p=pd.read_csv(path + "/breast_cancer_survival_by_stage.csv")
 #line(p, "Stage", "One_Year_Survival_Pct")
