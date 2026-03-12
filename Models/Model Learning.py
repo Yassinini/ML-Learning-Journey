@@ -16,11 +16,6 @@ y=housing[["price"]]
 
 m = LinearRegression()
 m.fit(x,y)
-
-#t=m.predict([[1900, 3, 2, 2, 2]])
-#print(m.predict([[1900, 3, 2, 2, 2]]))   #give data to evaluate
-#print(r2_score(y, m.predict(x)))         #check accuracy
-
 predictions = m.predict(x)
 
 plt.figure(figsize=(12,8))
@@ -33,3 +28,8 @@ plt.ylabel("Price")
 plt.show()
 
 print(r2_score(y,predictions))
+
+#t=m.predict([[1900, 3, 2, 2, 2]])
+#print(m.predict([[1900, 3, 2, 2, 2]]))   #give data to evaluate
+#print(r2_score(y, m.predict(x)))         #check accuracy
+
