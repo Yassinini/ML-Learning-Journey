@@ -18,6 +18,8 @@ m = LinearRegression()
 m.fit(x,y)
 predictions = m.predict(x)
 
+print(r2_score(y,predictions))
+
 plt.figure(figsize=(12,8))
 plt.scatter(housing["area"], housing["price"], alpha=0.2, label="Actual")
 plt.scatter(housing["area"], predictions, alpha=0.2, label="Predicted")
@@ -27,7 +29,6 @@ plt.xlabel("Area")
 plt.ylabel("Price")
 plt.show()
 
-print(r2_score(y,predictions))
 
 #t=m.predict([[1900, 3, 2, 2, 2]])
 #print(m.predict([[1900, 3, 2, 2, 2]]))   #give data to evaluate
