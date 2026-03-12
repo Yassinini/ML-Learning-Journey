@@ -2,15 +2,33 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 import pandas as pd
 import kagglehub
+import matplotlib.pyplot as plt
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), "../Plots+Data"))
+from Plots import line , scatter
 
 path = kagglehub.dataset_download("anassarfraz13/housing-dataset-info-about-houses")
 housing = pd.read_csv(path + "/Housing.csv")
 
-x=housing[["area", "bedrooms", "bathrooms", "stories", "parking", "mainroad"]]
+x=housing[["area", "bedrooms", "bathrooms", "stories", "parking"]]
 y=housing[["price"]]
 
 m = LinearRegression()
 m.fit(x,y)
 
-print(m.predict([[1900, 3, 2, 2, 2, 1]]))
-print(r2_score(y, m.predict(x)))
+#t=m.predict([[1900, 3, 2, 2, 2]])
+#print(m.predict([[1900, 3, 2, 2, 2]]))   #give data to evaluate
+#print(r2_score(y, m.predict(x)))         #check accuracy
+
+predictions = m.predict(x) 
+plt.figure(figsize=(12,8))
+plt.scatter(housing["area"], housing["price"], alpha=0.2, label="Actual")
+plt.scatter(housing["area"], predictions, alpha=0.2, label="Predicted")
+plt.legend()
+plt.title("Actual vs Predicted Prices")
+plt.xlabel("Area")
+plt.ylabel("Price")
+plt.show()
+
+print(r2_score(y,predictions))
