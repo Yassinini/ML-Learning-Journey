@@ -17,13 +17,15 @@ Keeping progress updates for libraries as i learn (Post Pandas & Numpy).
     - Line plots
 - sklearn for machine learning models, Linear Regression so far on progress
 - Comparison between Predicted values vs Actual values
+- My first ever full machine learning model for a kaggle competition (Predicts exam scores) #12/3/2026
+- Prior to the full extended coursework planned ahead, basic understanding of machine learning concepts
 
 ## Stack
 - Python
 - pandas
 - matplotlib
 - numpy
-- sklearn
+- sklearn (Linear Regression, Logistic Regression, Random Forests)
 
 ## Requirements
 - Matplotlib
