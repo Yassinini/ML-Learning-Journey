@@ -21,7 +21,8 @@ m.fit(x,y)
 #print(m.predict([[1900, 3, 2, 2, 2]]))   #give data to evaluate
 #print(r2_score(y, m.predict(x)))         #check accuracy
 
-predictions = m.predict(x) 
+predictions = m.predict(x)
+
 plt.figure(figsize=(12,8))
 plt.scatter(housing["area"], housing["price"], alpha=0.2, label="Actual")
 plt.scatter(housing["area"], predictions, alpha=0.2, label="Predicted")

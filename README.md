@@ -15,16 +15,19 @@ Keeping progress updates for libraries as i learn (Post Pandas & Numpy).
     - Scatter plots
     - Bar plots
     - Line plots
-
+- sklearn for machine learning models, Linear Regression so far on progress
+- Comparison between Predicted values vs Actual values
 
 ## Stack
 - Python
 - pandas
 - matplotlib
 - numpy
+- sklearn
 
 ## Requirements
 - Matplotlib
 - Pandas
 - Numpy
 - Kaggelhub
+- sklearn
