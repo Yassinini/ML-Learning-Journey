@@ -19,6 +19,7 @@ Keeping progress updates for libraries as i learn (Post Pandas & Numpy).
 - Comparison between Predicted values vs Actual values
 - My first ever full machine learning model for a kaggle competition (Predicts exam scores) #12/3/2026
 - Prior to the full extended coursework planned ahead, basic understanding of machine learning concepts
+- Multiple Prediction Models set for practice purposes and to compare performance
 
 ## Stack
 - Python

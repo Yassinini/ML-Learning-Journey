@@ -27,7 +27,7 @@ m=RandomForestClassifier(max_depth=5)
 m.fit(x_train, y_train)
 pred=m.predict(x_val)
 
-p=m.predict([[75, 185, 1, 3,16]]) #Custom prediction
+p=m.predict([[75, 185, 1, 3,16]]) #Custom prediction 
 print(p)
 
 print("Accuracy Score:", accuracy_score(y_val, pred))

@@ -1,3 +1,4 @@
+# Model works efficiently considering the data provided
 import kagglehub
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
