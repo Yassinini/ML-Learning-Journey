@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 
 d=pd.read_csv(r'D:\@Code\yayay\Machine_Learning\kagglecom\train.csv')
 d['internet_access'] = (d['internet_access'] == 'Yes').astype(int)
-d["facility_rating"] = d["facility_rating"].map({"high": 1, "medium": 0, "low": -1})
-d["exam_difficulty"] = d["exam_difficulty"].map({"easy" : 1, "moderate" : 0, "hard" : -1})
+d["facility_rating"] = d["facility_rating"].map({"high": 2, "medium": 1, "low": 0})
+d["exam_difficulty"] = d["exam_difficulty"].map({"easy" : 0, "moderate" : 1, "hard" : 2})
 x=d[['age', 'study_hours', 'class_attendance', 'sleep_hours', 'internet_access', 'facility_rating', 'exam_difficulty']]
 y=d['exam_score'] 
 
@@ -18,13 +18,13 @@ m.fit(x_train, y_train)
 
 prediction=m.predict(x_test)
 print("overall r2: \n", r2_score(y_test, prediction))
-t=m.predict([[25, 5, 80, 7, 1, 0, 1]])
+t=m.predict([[25, 5, 80, 7, 1, 0, 2]])
 print("test prediction: \n", t)
      
 
 plt.figure(figsize=(12,8))
-plt.scatter(y_test, prediction, alpha=0.2, color="blue", label="Predicted")
-plt.plot([20, 100], [20, 100], 'r--', label="Perfect prediction")
+plt.scatter(y_test, prediction, alpha=0.2, label="Predicted",  color="cyan")
+plt.plot([20, 100], [20, 100],label="Perfect prediction", color = "red")
 plt.legend()
 plt.title("Actual vs Predicted Exam Scores")
 plt.xlabel("Actual Exam Score")
